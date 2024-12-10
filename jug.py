@@ -64,10 +64,13 @@ def main():
                 new_path = path.copy() + [next]
                 QQ.append(new_path)
 
-    print("\nPath from (0, 0) to (0, 4)")
+    print("\nPaths from (0, 0) to (0, 4)")
     for i, path in enumerate(paths):
         path.reverse()
         print(f"{i}: {path}")
+
+    import pickle
+    pickle.dump(G, open("jug.pkl", "wb"))
 
 
 if __name__ == "__main__":
